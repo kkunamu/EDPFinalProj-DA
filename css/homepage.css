@@ -1,0 +1,132 @@
+/* homepage.css */
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    padding: 0 20px;
+}
+
+.hero-content {
+    width: 50%;
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.cta-button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 20px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.hero-image {
+    width: 50%;
+}
+
+.hero-image img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* About Us Section */
+.about-us {
+    display: flex;
+    padding: 50px 20px;
+    background-color: #fafafa;
+}
+
+.about-left {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.about-left h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.divider {
+    width: 10%;
+    height: 3px;
+    background-color: #ff6f61;
+    margin-bottom: 20px;
+}
+
+.about-left p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.about-right {
+    width: 50%;
+}
+
+.carousel {
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.carousel-item {
+    width: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Help Section - Component Cards */
+.help-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 22%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
