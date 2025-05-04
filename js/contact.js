@@ -14,7 +14,6 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         return; 
     }
 
-    // Simulate form submission
-    alert('Thank you for contacting us! We will get back to you soon.');
+    showModal();
     this.reset(); // Reset the form
 });
