@@ -1,13 +1,16 @@
-// Function to load HTML from a file into a div
+document.addEventListener("DOMContentLoaded", () => {
+    loadHTML('header.html', 'header-container');
+    loadHTML('footer.html', 'footer-container');
+});
+
 function loadHTML(file, elementId) {
     fetch(file)
         .then(response => response.text())
         .then(data => {
             document.getElementById(elementId).innerHTML = data;
 
-            // Once header is injected, run the JavaScript for selected state
             if (elementId === 'header-container') {
-                setSelectedState();
+                setSelectedState(); // this is now where we also handle toggle logic
             }
         })
         .catch(error => {
@@ -15,24 +18,16 @@ function loadHTML(file, elementId) {
         });
 }
 
-// Load the header and footer into the page
-loadHTML('header.html', 'header-container');
-loadHTML('footer.html', 'footer-container');
-
-// Function to set selected state for navigation links
 function setSelectedState() {
-    const currentPage = window.location.pathname.split("/").pop(); // Get the file name
+    const currentPage = window.location.pathname.split("/").pop();
     const navLinks = document.querySelectorAll(".nav-link");
 
-    // Loop through each nav link and add the 'selected' class if it matches the current page
     navLinks.forEach(link => {
-        const linkHref = link.getAttribute("href").split("/").pop(); // Get the file name part of the href
+        const linkHref = link.getAttribute("href").split("/").pop();
         if (linkHref === currentPage) {
             link.classList.add("selected");
 
-            // Check if the link is a dropdown item (either Services or Projects) and update the main navbar link
-            if (link.getAttribute("href") === "services.html" || link.getAttribute("href") === "projects.html") {
-                // Select the 'Services' link in the main navbar (only if it's the Services or Projects page)
+            if (linkHref === "services.html" || linkHref === "projects.html") {
                 const mainServicesLink = document.querySelector('.navbar .nav-link[href="#"]');
                 if (mainServicesLink) {
                     mainServicesLink.classList.add("selected");
@@ -40,4 +35,13 @@ function setSelectedState() {
             }
         }
     });
+
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('.navbar ul');
+
+    if (toggleBtn && navList) {
+        toggleBtn.addEventListener('click', () => {
+            navList.classList.toggle('show');
+        });
+    }
 }

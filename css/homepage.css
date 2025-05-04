@@ -3,16 +3,23 @@
 /* Hero Section */
 .hero {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background: linear-gradient(to bottom, rgba(70, 109, 54, 0.3), rgba(70, 109, 54, 0.6), rgba(255, 254, 250, 1)),
+                url('/assets/img/farmer-photo.jpg') no-repeat center center;
+    background-size: cover;
+    background-position: 30% 20%;
+    position: relative; /* Needed for the background image */
+    text-align: center;
+    color: white; /* Make sure text is visible on top of the image */
     padding: 0 20px;
 }
 
 .hero-content {
-    width: 50%;
-    text-align: left;
+    max-width: 600px;
+    z-index: 2; /* Make sure text appears above the image */
 }
 
 .hero h1 {
@@ -34,99 +41,122 @@
     margin-top: 20px;
     display: inline-block;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.hero-image {
-    width: 50%;
+.cta-button:hover {
+    background-color: #e14c42; /* Slightly darker on hover */
 }
 
-.hero-image img {
-    width: 100%;
-    object-fit: cover;
+/* Divider Styles */
+.divider {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.line {
+    width: 30px;
+    height: 4px;
+    background-color: #f39c12;
+    margin: 0 5px;
+    border-radius: 2px;
 }
 
 /* About Us Section */
 .about-us {
     display: flex;
+    justify-content: space-between;
     padding: 50px 20px;
-    background-color: #fafafa;
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .about-left {
     width: 50%;
-    padding-right: 20px;
-}
-
-.about-left h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.divider {
-    width: 10%;
-    height: 3px;
-    background-color: #ff6f61;
-    margin-bottom: 20px;
-}
-
-.about-left p {
-    font-size: 1rem;
-    line-height: 1.6;
 }
 
 .about-right {
-    width: 50%;
-}
-
-.carousel {
-    display: flex;
-    gap: 10px;
-    overflow: hidden;
+    width: 45%;
 }
 
 .carousel-item {
-    width: 100%;
+    margin-bottom: 20px;
 }
 
 .carousel-item img {
     width: 100%;
     height: auto;
+    border-radius: 5px;
 }
 
-/* Help Section - Component Cards */
+/* Help Section */
 .help-section {
     padding: 50px 20px;
-    text-align: center;
     background-color: #fff;
+    text-align: center;
 }
 
 .card-container {
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
+    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .card {
     width: 22%;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    text-align: center;
 }
 
 .card img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 .card p {
     margin-top: 10px;
-    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-.card:hover {
-    transform: scale(1.05);
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+    }
+
+    .about-us {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-left, .about-right {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
 }

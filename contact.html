@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/contact-us.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
@@ -17,11 +18,11 @@
 <body>
     <div id="header-container"></div>
     <div class="contact-container">
-        <!-- Left Side -->
+        <!-- Left Side: Map & Details -->
         <div class="left-side">
             <div id="map">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.919084177113!2d121.04925587496052!3d14.65140698976464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b7d8b4e8b4e5%3A0x4b1e8b4e8b4e8b4e!2sElliptical%20Road%2C%20Diliman%2C%20Quezon%20City%2C%201100!5e0!3m2!1sen!2sph!4v1610000000000!5m2!1sen!2sph" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.919084177113!2d121.04925587496052!3d14.65140698976464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b7d8b4e8b4e5%3A0x4b1e8b4e8b4e8b4e!2sElliptical%20Road%2C%20Diliman%2C%20Quezon%20City%2C%201100!5e0!3m2!1sen!2sph!4v1610000000000!5m2!1sen!2sph"  
                     width="418" 
                     height="364" 
                     style="border:0;" 
@@ -30,21 +31,30 @@
                 </iframe>
             </div>
             <div class="map-details">
-                <p><strong>Address:</strong> Elliptical Road, Diliman, Quezon City, 1100</p>
-                <p><strong>Contact Number:</strong> +63 (2) 8928-8741 to 64 and +63 (2) 8273-2474</p>
-                <p><strong>Email (General/Technical):</strong> osec.official@da.gov.ph</p>
-                <p><strong>Email (Invitations/Appointments):</strong> osec.invitations@da.gov.ph</p>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>Elliptical Road, Diliman, Quezon City, 1100
+                </p>
+                <p>
+                    <i class="fas fa-phone-alt"></i>+63 (2) 8928-8741 to 64/+63 (2) 8273-2474
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i>General/Technical - osec.official@da.gov.ph 
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i>Invitations/Appointments - osec.invitations@da.gov.ph
+                </p>
                 <div class="social-media">
-                    <a href="#"><img src="assets/facebook-icon.png" alt="Facebook" width="24"></a>
+                    <a href="https://facebook.com/dacentralphilippines"><i class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
+            
         </div>
 
         <!-- Divider -->
-        <div class="divider"></div> 
+        <div class="divider"></div>
 
-        <!-- Right Side -->
-        <div class="right-side">
+        <!-- Middle Column: Form Inputs -->
+        <div class="middle-column">
             <h2>Have a question? Fill out the form and we'll get back ASAP!</h2>
             <form id="contact-form">
                 <label for="full-name">Full Name</label>
@@ -57,7 +67,7 @@
                 <input type="text" id="company" name="company" placeholder="Ex. ABC Company" required>
 
                 <label for="contact-number">Contact Number</label>
-                <input type="tel" id="contact-number" name="contact-number" placeholder="Ex. +0912 345 6789" required>
+                <input type="tel" id="contact-number" name="contact-number" placeholder="Ex. +63 912 345 6789" required>
 
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Ex. example@gmail.com" required>
@@ -65,10 +75,27 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="5" placeholder="Enter your message..." required></textarea>
 
-                <button type="submit">Submit</button>
+                <button type="submit">
+                    <i class="fas fa-check"></i> Submit
+                  </button>
             </form>
         </div>
+
+        <!-- Right Side: Design with Circles -->
+        <div class="right-side">
+            <div class="circle large-circle circle1">
+                <img src="assets/img/contact-circle1.webp" alt="Circle 1">
+            </div>
+            <div class="circle large-circle circle2">
+                <img src="assets/img/contact-circle2.jpg" alt="Circle 2">
+            </div>
+            <div class="circle small-circle circle3">
+            </div>
+            <div class="circle small-circle circle4">
+            </div>
+        </div>        
     </div>
+
     <div id="footer-container"></div>
     <script src="js/contact.js"></script>
     <script src="js/inject.js"></script>

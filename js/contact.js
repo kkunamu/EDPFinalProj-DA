@@ -11,7 +11,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     // Simple validation
     if (!fullName || !occupation || !company || !contactNumber || !email || !message) {
         alert('Please fill out all fields.');
-        return;
+        return; 
     }
 
     // Simulate form submission
