@@ -40,3 +40,21 @@ p {
 .hidden {
     display: none;
 }
+
+#loadingOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #loadingOverlay img {
+    width: 300px;
+    height: auto;
+  }

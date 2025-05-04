@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Title Section */
+.title-section {
+    background: linear-gradient(to left, rgba(241, 177, 71, 0.4), rgba(255, 254, 250, 1)), url('/assets/img/services-title-bg.jpg') no-repeat center center;
+    background-size: cover;
+    height: 250px;
+    border-bottom-right-radius: 190px;
+    padding: 0 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.title-section h1 {
+    font-family: 'Parisienne', cursive;
+    color: #F1B147;
+    font-size: 100px;
+    margin: 0;
+    text-align: left;
+}
+
+.title-section p {
+    font-family: 'Inter', sans-serif;
+    color: #94984A;
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: left;
+}

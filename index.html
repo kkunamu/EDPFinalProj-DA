@@ -16,7 +16,6 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body>
-
         <div id="header-container"></div>
 
         <!-- Hero Section -->
@@ -42,22 +41,30 @@
         <section class="about-us">
             <div class="about-left">
                 <h2>About Us</h2>
-                <div class="divider"></div>
-                <p>The Department of Agriculture (DA) is the government agency at the forefront of promoting agricultural development and ensuring food security across the Philippines. It supports farmers, fisherfolk, and agri-based enterprises through inclusive policies, modern technologies, and targeted investments — with a strong focus on sustainability and community empowerment.
-                <br>
+                <p>The <span class="highlight-da"> Department of Agriculture (DA) </span> is the government agency at the forefront of promoting agricultural development and ensuring food security across the Philippines. It supports farmers, fisherfolk, and agri-based enterprises through inclusive policies, modern technologies, and targeted investments — with a strong focus on sustainability and community empowerment.
+                <br><br>
                 Guided by the vision of Masaganang Agrikultura, Maunlad na Ekonomiya, the DA works hand in hand with local government units and private sectors to build a resilient, competitive, and productive agriculture sector. From seed distribution to infrastructure and training, the DA is committed to uplifting rural livelihoods and nourishing every Filipino home.</p>
             </div>
             <div class="about-right">
-                <div class="carousel">
-                    <!-- Carousel Images -->
-                    <div class="carousel-item">
-                        <img src="assets/images/about-image1.jpg" alt="Image 1">
+                <div class="slideshow-container">
+                    <!-- Image Show -->
+                    <div class="slide fade">
+                        <img src="assets/img/home-about-image1.png" alt="Image 1">
                     </div>
-                    <div class="carousel-item">
-                        <img src="assets/images/about-image2.jpg" alt="Image 2">
+                    <div class="slide fade">
+                        <img src="assets/img/home-about-image2.png" alt="Image 2">
+                    </div>
+                    <div class="slide fade">
+                        <img src="assets/img/home-about-image3.png" alt="Image 3">
+                    </div>
+                    <div class="slide fade">
+                        <img src="assets/img/home-about-image4.png" alt="Image 4">
+                    </div>
+                    <div class="slide fade">
+                        <img src="assets/img/home-about-image5.png" alt="Image 5">
                     </div>
                 </div>
-            </div>
+            </div>            
         </section>        
         <div class="scallop-down"></div>
 
@@ -65,34 +72,45 @@
         <section class="help-section">
             <h2>Here's How We Can Help!</h2>
             <div class="card-container">
-                <div class="card">
+                <div class="card card-green">
                     <a href="services.html">
-                        <img src="assets/images/services-card.jpg" alt="Services">
-                        <p>Services</p>
+                        <div class="card-image">
+                            <img src="assets/img/home-help-services-card.png" alt="Services"> 
+                        </div>
+                        <p class="card-text">SERVICES</p>
                     </a>
                 </div>
-                <div class="card">
+                <div class="card card-yellow">
                     <a href="projects.html">
-                        <img src="assets/images/projects-card.jpg" alt="Projects">
-                        <p>Projects</p>
+                        <div class="card-image">
+                            <img src="assets/img/home-help-projects-card.png" alt="Projects">
+                        </div>
+                        <p class="card-text">PROJECTS</p>
                     </a>
                 </div>
-                <div class="card">
+                <div class="card card-green">
                     <a href="scheduling.html">
-                        <img src="assets/images/scheduling-card.jpg" alt="Scheduling">
-                        <p>Scheduling</p>
+                        <div class="card-image">
+                            <img src="assets/img/home-help-scheduling-card.png" alt="Scheduling">
+                        </div>
+                        <p class="card-text">SCHEDULING</p>
                     </a>
                 </div>
-                <div class="card">
-                    <a href="contact-us.html">
-                        <img src="assets/images/contact-us-card.jpg" alt="Contact Us">
-                        <p>Contact Us</p>
+                <div class="card card-yellow">
+                    <a href="contact.html">
+                        <div class="card-image">
+                            <img src="assets/img/home-help-contact-us-card.png" alt="Contact Us">
+                        </div>
+                        <p class="card-text">CONTACT US</p>
                     </a>
-                </div>
+                </div>                
             </div>
-        </section>
+        </section>             
 
         <div id="footer-container"></div>
+
+        <script src="js/homepage.js"></script>
+        <script src="js/main.js"></script>   
         <script src="js/inject.js"></script>    
     </body>
     </html>
