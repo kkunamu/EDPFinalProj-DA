@@ -18,10 +18,54 @@
 </head>
 <body>
     <div id="header-container"></div>
+    <div class="container">
+        <!-- Column 1: Image -->
+        <div class="column image-column">
+            <img src="assets/img/scheduling-Farmer-from-Pulilan-Bulacan.png" alt="Schedule Image">
+        </div>
     
-    Scheduling Page!
+        <!-- Divider -->
+        <div class="divider"></div>
+    
+        <!-- Column 2: Form -->
+        <div class="column form-column">
+            <h2>Schedule an Appointment</h2>
+            <form id="appointmentForm">
+                <input type="text" id="fullName" placeholder="Full Name" required>
+                <input type="text" id="occupation" placeholder="Occupation" required>
+                <input type="text" id="company" placeholder="Company" required>
+                <input type="tel" id="contact" placeholder="Contact Number" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <textarea id="reason" placeholder="Reason for Appointment" required></textarea>
+                <button type="button" id="confirmBtn">Confirm</button>
+            </form>
+        </div>
+    
+        <!-- Column 3: Date Display -->
+        <div class="column date-column">
+            <h3>Selected Date:</h3>
+                <input type="date" id="datePicker">
+            <p id="selectedDate">No date selected</p>
+        </div>
+    </div>
+    
+      <!-- Modal -->
+    <div class="modal-hidden" id="confirmationModal">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+            <h3>Appointment Confirmation</h3>
+            <p><strong>Date:</strong> <span id="modalDate"></span></p>
+            <p><strong>Name:</strong> <span id="modalName"></span></p>
+            <p><strong>Occupation:</strong> <span id="modalOccupation"></span></p>
+            <p><strong>Company:</strong> <span id="modalCompany"></span></p>
+            <p><strong>Contact:</strong> <span id="modalContact"></span></p>
+            <p><strong>Email:</strong> <span id="modalEmail"></span></p>
+            <p><strong>Reason:</strong> <span id="modalReason"></span></p>
+        </div>
+    </div>
+    
     <div id="footer-container"></div>
-
+    <script src="js/scheduling.js"></script>
     <script src="js/main.js"></script>   
     <script src="js/inject.js"></script>
      
