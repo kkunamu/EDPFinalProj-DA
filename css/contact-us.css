@@ -1,21 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
 
-body {
-    font-family: 'Libre Baskerville', serif;
-}
-
 .contact-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 0 20px 20px;
+    padding: 0 0 20px;
     justify-content: space-between;
 }
 
 .left-side {
     flex: 1 1 30%; 
     background-color: rgba(255, 245, 228, 1);
-    padding: 20px;
+    padding: 20px 40px 20px 40px;
 }
 
 #map {
@@ -66,7 +62,7 @@ body {
 }
 
 .middle-column {
-    flex: 1 1 40%; /* Take up 40% of the space */
+    flex: 1 1 40%; 
 }
 
 .middle-column h2 {
@@ -181,41 +177,51 @@ form button:hover {
 }
 
 .modal {
-    display: none;
     position: fixed;
-    z-index: 9999;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-  
-  .modal-content {
-    background-color: #fff;
-    margin: 15% auto;
-    padding: 30px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 400px;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  .close-button {
-    float: right;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    color: #555;
-  }
-  
-  .close-button:hover {
-    color: #f39c12;
-  }
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
 
-  
+.modal-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 650px;
+    width: 60%;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h1 {
+    color: #f39c12;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 30px;
+}
+.close-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #f39c12;
+    color: #1E1E1E;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background-color: #fbb74a;
+}
+
+.hidden {
+    display: none;
+}
 
 /* Responsive Design */
 @media (max-width: 1375px) {

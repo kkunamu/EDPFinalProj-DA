@@ -1,0 +1,148 @@
+footer {
+    background-color: #C9CBA2;
+    color: white;
+    padding: 2rem 3rem;
+    font-size: 12px;
+  }
+  
+  
+  #top-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .column {
+    flex: 1 1 30%;
+    min-width: 250px;
+  }
+  
+  .column h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.3rem;
+    color: #466D36;
+  }
+  
+  .column ul {
+    list-style: none;
+    padding: 0 0 0 15px;
+  }
+  
+  .column li {
+    margin-bottom: 0.4rem;
+  }
+  
+  .column a {
+    color: white;
+    text-decoration: none;
+    transition: font-size 0.5s ease, color 0.3s ease;
+  }
+  
+  .column a:hover {
+    text-decoration: underline;
+    color: #7D7F3D;
+    font-size: 13px;
+  }
+  
+  
+  #bottom-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    border-top: 1px solid #555;
+    padding-top: 1.5rem;
+  }
+  
+  .regional-offices {
+    flex: 2;
+    min-width: 300px;
+  }
+  
+  .regional-offices h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 0.5rem;
+  }
+  
+  
+  .regions ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem 1.2rem;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .regions li {
+    width: calc(100% / 8 - 1.2rem);
+    text-align: left;
+  }
+  
+  .regions a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease, font-size 0.5 ease;
+  }
+  
+  .regions a:hover {
+    text-decoration: underline;
+    color: #7D7F3D;
+    font-size: 1em;
+  }
+  
+  
+  .seal img {
+    height: 80px;
+    object-fit: contain;
+  }
+  
+  
+  .gov-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .gov-links .top,
+  .gov-links .bottom {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .gov-links img {
+    height: 40px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    footer {
+      padding: 1.5rem;
+      font-size: 11px;
+    }
+  
+    #top-section,
+    #bottom-section {
+      flex-direction: column;
+    }
+  
+    .column,
+    .regional-offices,
+    .seal,
+    .gov-links {
+      width: 100%;
+    }
+  
+    .regions li {
+      width: 50%;
+    }
+  
+    .gov-links img {
+      height: 30px;
+    }
+  }
+  

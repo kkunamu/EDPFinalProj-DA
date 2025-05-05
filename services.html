@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/services.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
@@ -16,144 +17,147 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div id="header-container"></div>
-    
-    <!-- Title Section -->
-    <section class="title-section">
-        <div class="title-content">
-            <h1>Services</h1>
-            <p>Tulong at serbisyo, mula bukid hanggang bangka — empowering rural communities every step of the way.</p>
-        </div>
-    </section>
+    <div id="loader-container"></div>
 
-    <!-- Carousel Section -->
-    <section class="services-carousel">
-        <div class="carousel-container">
-            <!-- Card 1 -->
-            <div class="card">
-                <h3>Accreditation of Civil Society Organizations</h3>
-                <p>The Department of Agriculture (DA) accredits Civil Society Organizations (CSOs) to ensure effective implementation of agriculture and fishery programs, promoting transparency and accountability, and enhancing citizen participation.</p>
-                <div class="card-buttons">
-                    <button class="top-button" onclick="openModal('modal1')">Implementing Guidelines and Issuances</button>
-                    <button class="lower-button" onclick="window.open('http://www.pcaf.da.gov.ph/index.php/list-of-accredited-civil-society-organizations-csos/')">List of Accredited CSOs</button>
+    <div id="main-content" style="display: none;">
+        <div id="header-container"></div>
+        
+        <!-- Title Section -->
+        <section class="title-section">
+            <div class="title-content">
+                <h1>Services</h1>
+                <p>Tulong at serbisyo, mula bukid hanggang bangka — empowering rural communities every step of the way.</p>
+            </div>
+        </section>
+
+        <!-- Carousel Section -->
+        <section class="services-carousel">
+            <div class="carousel-container">
+                <!-- Card 1 -->
+                <div class="card">
+                    <h3>Accreditation of Civil Society Organizations</h3>
+                    <p>The Department of Agriculture (DA) accredits Civil Society Organizations (CSOs) to ensure effective implementation of agriculture and fishery programs, promoting transparency and accountability, and enhancing citizen participation.</p>
+                    <div class="card-buttons">
+                        <button class="top-button" onclick="openModal('modal1')">Implementing Guidelines and Issuances</button>
+                        <button class="lower-button" onclick="window.open('http://www.pcaf.da.gov.ph/index.php/list-of-accredited-civil-society-organizations-csos/')">List of Accredited CSOs</button>
+                    </div>
+                    <div class="image-credit">Image credit: [source]</div>
                 </div>
-                <div class="image-credit">Image credit: [source]</div>
+        
+                <!-- Card 2 -->
+                <div class="card">
+                    <h3>Accreditation, Licensing, Registration & Other Related Services</h3>
+                    <p>The Department of Agriculture (DA) provides accreditation, licensing, and registration services to support agricultural stakeholders...</p>
+                    <button onclick="openModal('modal2')">Show more details</button>
+                    <div class="image-credit">Image credit: [source]</div>
+                </div>
+        
+                <!-- Card 3 -->
+                <div class="card">
+                    <h3>Agribusiness and Marketing Assistance</h3>
+                    <p>The DA's Agribusiness and Marketing Assistance Service (AMAS) connects farmers, fisherfolk, and agri-MSMEs to markets...</p>
+                    <button onclick="openModal('modal3')">More about this</button>
+                    <div class="image-credit">Image credit: [source]</div>
+                </div>
+        
+                <!-- Card 4 -->
+                <div class="card">
+                    <h3>Agricultural Credit and Financing Programs</h3>
+                    <p>The DA offers accessible credit and loan programs designed to support farmers...</p>
+                    <ul>
+                        <li>Survival and Recovery (SURE) Assistance Program</li>
+                        <li>Kapital Access for Young Agripreneurs (KAYA)</li>
+                        <li>Agri-Negosyo Loan Program (ANYO)</li>
+                        <li>Accessible Loans for Empowered, Resilient, and Transformed Agrarian Reform Beneficiary Organizations (ALERT ARBOs) Program</li>
+                    </ul>
+                    <div class="image-credit">Image credit: [source]</div>
+                </div>
+        
+                <!-- Card 5 -->
+                <div class="card">
+                    <h3>Agriculture and Fisheries Information Services</h3>
+                    <p>The Department of Agriculture (DA) provides essential information and communication services...</p>
+                    <ul>
+                        <li>Provides briefings and orientations on DA's programs and services</li>
+                        <li>Refers clients to the appropriate DA agency for specific requests</li>
+                        <li>Offers information, education, and communication (IEC) materials</li>
+                        <li>Handles requests aired through media channels (radio/TV) and letters</li>
+                        <li>Documents DA activities and releases news articles for media distribution</li>
+                        <li>Coordinates media interviews with DA officials</li>
+                        <li>Maintains an information board displaying monthly activities from DA agencies</li>
+                    </ul>
+                    <div class="image-credit">Image credit: [source]</div>
+                </div>
+        
+                <!-- Card 6 -->
+                <div class="card">
+                    <h3>Soils and Water Services</h3>
+                    <p>The Department of Agriculture (DA) offers comprehensive soil and water services...</p>
+                    <ul>
+                        <li>Conducts soil and land resources evaluation</li>
+                        <li>Provides technical evaluation on land use matters</li>
+                        <li>Assists in soil conservation farm planning and the establishment of soil-guided farms</li>
+                        <li>Implements rainwater harvesting facilities and small-scale irrigation infrastructures</li>
+                        <li>Manages cloud seeding operations to enhance water availability</li>
+                        <li>Offers multi-functional laboratory services for soil and water testing</li>
+                        <li>Supports research and development on soil and water resources</li>
+                        <li>Develops and manages soil and water information systems and databases </li>
+                    </ul>
+                    <div class="image-credit">Image credit: [source]</div>
+                </div>
+        
+                <!-- Card 7 -->
+                <div class="card">
+                    <h3>Special Projects Coordination & Management Assistance</h3>
+                    <p>The Department of Agriculture (DA) ensures the efficient implementation of Foreign-Assisted Projects (FAPs)...</p>
+                    <button onclick="openModal('modal4')">Show more details</button>
+                    <div class="image-credit">Image credit: [source]</div>
+                </div>
+        
+                <!-- Card 8 -->
+                <div class="card">
+                    <h3>Training and Extension Services</h3>
+                    <p>The Department of Agriculture (DA) offers a variety of training and extension services...</p>
+                    <ul>
+                        <li>Scholarship Programs</li>
+                        <li>Extension Programs and Projects</li>
+                        <li>Training Services</li>
+                        <li>Agriculture and Fisheries Extension (AFE) Grants System</li>
+                        <li>e-Learning</li>
+                    </ul>
+                    <div class="image-credit">Image credit: [source]</div>
+                </div>
+        
+                <!-- Card 9 (CTA Card) -->
+                <div class="card cta-card">
+                    <img src="logo.png" alt="Logo">
+                    <h3>Interested in a service?</h3>
+                    <button onclick="window.location.href='scheduling.html'">Schedule an appointment!</button>
+                    <h3>Have more questions?</h3>
+                    <button onclick="window.location.href='contact.html'">Contact us for more details!</button>
+                </div>
             </div>
-    
-            <!-- Card 2 -->
-            <div class="card">
-                <h3>Accreditation, Licensing, Registration & Other Related Services</h3>
-                <p>The Department of Agriculture (DA) provides accreditation, licensing, and registration services to support agricultural stakeholders...</p>
-                <button onclick="openModal('modal2')">Show more details</button>
-                <div class="image-credit">Image credit: [source]</div>
+        
+            <!-- Circles and Arrows -->
+            <div class="circles-navigation">
+                <button class="arrow left-arrow">←</button>
+                <div class="circles">
+                    <span class="circle active"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+                <button class="arrow right-arrow">→</button>
             </div>
-    
-            <!-- Card 3 -->
-            <div class="card">
-                <h3>Agribusiness and Marketing Assistance</h3>
-                <p>The DA's Agribusiness and Marketing Assistance Service (AMAS) connects farmers, fisherfolk, and agri-MSMEs to markets...</p>
-                <button onclick="openModal('modal3')">More about this</button>
-                <div class="image-credit">Image credit: [source]</div>
-            </div>
-    
-            <!-- Card 4 -->
-            <div class="card">
-                <h3>Agricultural Credit and Financing Programs</h3>
-                <p>The DA offers accessible credit and loan programs designed to support farmers...</p>
-                <ul>
-                    <li>Survival and Recovery (SURE) Assistance Program</li>
-                    <li>Kapital Access for Young Agripreneurs (KAYA)</li>
-                    <li>Agri-Negosyo Loan Program (ANYO)</li>
-                    <li>Accessible Loans for Empowered, Resilient, and Transformed Agrarian Reform Beneficiary Organizations (ALERT ARBOs) Program</li>
-                </ul>
-                <div class="image-credit">Image credit: [source]</div>
-            </div>
-    
-            <!-- Card 5 -->
-            <div class="card">
-                <h3>Agriculture and Fisheries Information Services</h3>
-                <p>The Department of Agriculture (DA) provides essential information and communication services...</p>
-                <ul>
-                    <li>Provides briefings and orientations on DA's programs and services</li>
-                    <li>Refers clients to the appropriate DA agency for specific requests</li>
-                    <li>Offers information, education, and communication (IEC) materials</li>
-                    <li>Handles requests aired through media channels (radio/TV) and letters</li>
-                    <li>Documents DA activities and releases news articles for media distribution</li>
-                    <li>Coordinates media interviews with DA officials</li>
-                    <li>Maintains an information board displaying monthly activities from DA agencies</li>
-                </ul>
-                <div class="image-credit">Image credit: [source]</div>
-            </div>
-    
-            <!-- Card 6 -->
-            <div class="card">
-                <h3>Soils and Water Services</h3>
-                <p>The Department of Agriculture (DA) offers comprehensive soil and water services...</p>
-                <ul>
-                    <li>Conducts soil and land resources evaluation</li>
-                    <li>Provides technical evaluation on land use matters</li>
-                    <li>Assists in soil conservation farm planning and the establishment of soil-guided farms</li>
-                    <li>Implements rainwater harvesting facilities and small-scale irrigation infrastructures</li>
-                    <li>Manages cloud seeding operations to enhance water availability</li>
-                    <li>Offers multi-functional laboratory services for soil and water testing</li>
-                    <li>Supports research and development on soil and water resources</li>
-                    <li>Develops and manages soil and water information systems and databases </li>
-                </ul>
-                <div class="image-credit">Image credit: [source]</div>
-            </div>
-    
-            <!-- Card 7 -->
-            <div class="card">
-                <h3>Special Projects Coordination & Management Assistance</h3>
-                <p>The Department of Agriculture (DA) ensures the efficient implementation of Foreign-Assisted Projects (FAPs)...</p>
-                <button onclick="openModal('modal4')">Show more details</button>
-                <div class="image-credit">Image credit: [source]</div>
-            </div>
-    
-            <!-- Card 8 -->
-            <div class="card">
-                <h3>Training and Extension Services</h3>
-                <p>The Department of Agriculture (DA) offers a variety of training and extension services...</p>
-                <ul>
-                    <li>Scholarship Programs</li>
-                    <li>Extension Programs and Projects</li>
-                    <li>Training Services</li>
-                    <li>Agriculture and Fisheries Extension (AFE) Grants System</li>
-                    <li>e-Learning</li>
-                </ul>
-                <div class="image-credit">Image credit: [source]</div>
-            </div>
-    
-            <!-- Card 9 (CTA Card) -->
-            <div class="card cta-card">
-                <img src="logo.png" alt="Logo">
-                <h3>Interested in a service?</h3>
-                <button onclick="window.location.href='scheduling.html'">Schedule an appointment!</button>
-                <h3>Have more questions?</h3>
-                <button onclick="window.location.href='contact.html'">Contact us for more details!</button>
-            </div>
-        </div>
-    
-        <!-- Circles and Arrows -->
-        <div class="circles-navigation">
-            <button class="arrow left-arrow">←</button>
-            <div class="circles">
-                <span class="circle active"></span>
-                <span class="circle"></span>
-                <span class="circle"></span>
-                <span class="circle"></span>
-                <span class="circle"></span>
-                <span class="circle"></span>
-                <span class="circle"></span>
-                <span class="circle"></span>
-                <span class="circle"></span>
-            </div>
-            <button class="arrow right-arrow">→</button>
-        </div>
-    </section>
+        </section>
 
-    <div id="footer-container"></div>
-
+        <div id="footer-container"></div>
+    </div>
     <script src="js/main.js"></script>   
     <script src="js/inject.js"></script>
      

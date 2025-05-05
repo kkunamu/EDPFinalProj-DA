@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         loadingOverlay.style.opacity = '0';
         setTimeout(function () {
           loadingOverlay.style.display = 'none';
+          document.getElementById('main-content').style.display = 'block';
         }, 1000);
       }, 2400);
     })
