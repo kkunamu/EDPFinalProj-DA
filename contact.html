@@ -97,18 +97,19 @@
         </div>        
     </div>
 
+    <div class = "modal hidden" id="contact-modal">
+        <div class ="modal-content">
+            <p>
+                We’ve received your inquiry and appreciate you taking the time to contact us.
+                Our team is reviewing your message, and we’ll get back to you as soon as possible with the information or clarification you need.
+            </p>
+            <button class="close-button" id="close-modal" type="button">Ok</button>
+        </div>
+    </div>
+
+    
     <div id="footer-container"></div>
     <script src="js/contact.js"></script>
-    <script src="modals/js/modalcontact-us.js"></script>
-    <script>
-     fetch('modals/html/modalcontact-us.html')
-            .then(response => response.text())
-            .then(html => {
-                document.body.insertAdjacentHTML('beforeend', html);
-            })
-            .catch(error => console.error('Error loading modal:', error));
-    </script>
-    
     <script src="js/main.js"></script>   
     <script src="js/inject.js"></script>    
 </body>
