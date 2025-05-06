@@ -8,21 +8,40 @@ body {
   
   .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 2rem;
-    padding: 2rem;
+    padding: 2rem 1rem;
+    align-items: flex-start;
   }
-  
+
+  .image-column {
+    padding-left: 0;
+    padding-right: 0;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .left-group {
+    display: flex;
+    align-items: stretch;
+    margin-left: -22rem;
+  }
+
   .image-column img {
     width: 409px;
     height: 709px;
     object-fit: cover;
+    object-position: 15% center;
     border-radius: 10px;
+    margin-left: 0.5rem;
   }
   
   .divider {
     width: 2px;
     background-color: #ccc;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   
   .form-column {
