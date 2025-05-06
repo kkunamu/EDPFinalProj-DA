@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // main carousel
     const carouselContainer = document.querySelector('.carousel-container');
     const cards = document.querySelectorAll('.carousel-container .card');
     const leftArrow = document.querySelector('.left-arrow');
-    const rightArrow = document.querySelector('.right-arrow');
+    const rightArrow = document.querySelectorAll('.right-arrow');
     const circles = document.querySelectorAll('.circle');
   
     let currentIndex = 0;
@@ -16,9 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   
-    rightArrow?.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) > maxIndex ? 0 : currentIndex + 1;
-      updateCarousel();
+    rightArrow?.forEach((arrow) => {
+      arrow.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) > maxIndex ? 0 : currentIndex + 1;
+        updateCarousel();
+      });
     });
   
     leftArrow?.addEventListener('click', () => {
@@ -35,10 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
   
     updateCarousel();
   
-    // moooooodals
+    // Modal-related functions
     function openModal(id) {
       const modal = document.getElementById(id);
-      if (modal) modal.style.display = 'flex';
+      if (modal) {
+        modal.style.display = 'flex';
+      }
     }
   
     function closeModal(id) {
@@ -63,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   
-    // accordion
     const headers = document.querySelectorAll('.accordion-header');
     headers.forEach(header => {
       header.addEventListener('click', () => {
@@ -76,9 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     });
-  
+
     window.openModal = openModal;
     window.closeModal = closeModal;
     window.outsideClick = outsideClick;
   });
-  

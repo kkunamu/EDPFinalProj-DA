@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault(); // Prevent actual form submission
 
         // Trim inputs to avoid spaces being counted as valid
-        const fullName = document.getElementById('full-name').value.trim();
+        const fullName = document.getElementById('fullname').value.trim();
         const occupation = document.getElementById('occupation').value.trim();
         const company = document.getElementById('company').value.trim();
         const contactNumber = document.getElementById('contact-number').value.trim();

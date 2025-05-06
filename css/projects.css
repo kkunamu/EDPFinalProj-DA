@@ -1,0 +1,224 @@
+/* Section Header (200px height with gradient + image bg) */
+.projects-header {
+    height: 200px;
+    background: linear-gradient(to left, rgba(148, 152, 74, 0.5), rgba(255, 254, 250, .8)),
+                url('/assets/img/projects-bg.jpg') no-repeat center center;
+    color: #151515;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .projects-header .overlay {
+    max-width: 1440px;
+  }
+  
+  .projects-header .overlay h1 {
+    font-size: 96px;
+    text-transform: uppercase;
+    color: #466D36;
+  }
+  
+  .projects-header .overlay p {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: -30px; 
+  }
+  
+  /* Tabbed Layout */
+  .projects-tabs {
+    width: 1360px;
+    height: 507px;
+    margin: 40px auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Flex wrapper */
+  .tabs-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Left side tab titles */
+  .tab-titles {
+    width: 199px;
+    background: #151515;
+    border-right: 3px solid rgb(148, 152, 74);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  
+  .tab-titles button {
+    padding: 16px;
+    color: #FFFEFA;
+    border: none;
+    font-size: 28px;
+    background: none;
+    text-align: left;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    overflow: hidden;
+  }
+  
+  .tab-titles button:hover {
+    background: rgb(172, 175, 116);
+  }
+  
+  .tab-titles button.active {
+    background: #FFFEFA;
+    border-left: 4px solid #94984A;
+    color: #94984A;
+  }
+  
+  /* Right side content */
+  .tab-content {
+    flex: 1;
+    padding-top: 10px;
+    overflow-y: auto;
+    position: relative;
+  }
+  
+  .tab-panel {
+    display: none;
+  }
+  
+  .tab-panel h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #FFFEFA;
+    background-color: #94984A;
+    text-align: center;
+  }
+  .tab-panel.active {
+    display: block;
+  }
+  
+  /* Content layout inside panel */
+  .tab-body {
+    margin-top: 16px;
+    margin-left: 10px;
+  }
+  
+  .tab-body a {
+    font-weight: bold;
+    color: #F1B147;
+  }
+  
+  .tab-body ul {
+    margin-left: 30px;
+  }
+
+  .tab-description img {
+    float: left;
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 2px;
+    object-fit: contain;
+  }  
+  
+  .tab-description {
+    font-size: 13px;
+    line-height: 1.3;
+    overflow: hidden;
+  }
+
+  .tab-description ol {
+    list-style: decimal;
+    margin-left: 30px;
+    padding-left: 10px;
+  }
+  
+  .tab-description::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  @media (max-width: 700px) {
+    .tabs-container {
+      flex-direction: column;
+    }
+  
+    .tab-titles {
+      width: 100%;
+      flex-direction: row;
+      overflow-x: auto;
+      border-right: none;
+      border-bottom: 3px solid rgb(148, 152, 74);
+    }
+  
+    .tab-titles button {
+      flex: 1;
+      font-size: 16px;
+      padding: 10px;
+      text-align: center;
+      white-space: nowrap;
+    }
+  
+    .tab-titles button.active {
+      border-left: none;
+      border-bottom: 4px solid #94984A;
+    }
+  
+    .tab-content {
+      padding: 10px;
+    }
+  
+    .projects-tabs {
+      width: 100%;
+      height: auto;
+      margin: 20px 0;
+    }
+  
+    .projects-header {
+      height: auto;
+      padding: 20px 10px;
+      text-align: center;
+      flex-direction: column;
+    }
+  
+    .projects-header .overlay h1 {
+      font-size: 32px;
+    }
+  
+    .projects-header .overlay p {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  
+    .tab-body {
+      margin-left: 0;
+    }
+  
+    .tab-description img {
+      float: none;
+      display: block;
+      margin: 0 auto 15px;
+      width: 100%;
+      max-width: 250px;
+    }
+  
+    .tab-description {
+      font-size: 14px;
+      text-align: left;
+    }
+  
+    .tab-description ul,
+    .tab-description ol {
+      margin-left: 20px;
+    }
+  
+    .tab-panel h2 {
+      font-size: 13px;
+      padding: 10px;
+    }
+  }
+  
+  
