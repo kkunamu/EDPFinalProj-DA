@@ -17,83 +17,85 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div id="header-container"></div>
-    <div class="container">
-        <!-- Column 1: Image -->
-        <div class="left-group">
-            <div class="column image-column">
-                <img src="assets/img/scheduling-Farmer-from-Pulilan-Bulacan.png" alt="Schedule Image">
+    <div id="loader-container"></div>
+    <div id="main-content" style="display: none;">
+        <div id="header-container"></div>
+        <div class="container">
+            <!-- Column 1: Image -->
+            <div class="left-group">
+                <div class="column image-column">
+                    <img src="assets/img/scheduling-Farmer-from-Pulilan-Bulacan.png" alt="Schedule Image">
+                </div>
+                <div class="divider"></div>
             </div>
-            <div class="divider"></div>
+        
+            <!-- Column 2: Form -->
+            <div class="column form-column">
+                <h2>Schedule an Appointment</h2>
+                <form id="appointmentForm">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Ex. Juan Dela Cruz" required>
+
+                    <label for="occupation">Occupation</label>
+                    <input type="text" id="occupation" name="occupation" placeholder="Ex. Farmer, Researcher, Fisherman" required>
+
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company" placeholder="Ex. ABC Company" required>
+
+                    <label for="contactNumber">Contact Number</label>
+                    <input type="tel" id="contactNumber" name="contactNumber" placeholder="Ex. +63 912 345 6789" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Ex. example@gmail.com" required>
+
+                    <label for="reason">Reason for Appointment</label>
+                    <textarea id="reason" name="reason" rows="4" placeholder="State your reason..." required></textarea>
+
+                    <button type="submit" id="confirmBtn">Confirm</button>
+                </form>
+            </div>
+        
+            <!-- Column 3: Date Display -->
+            <div class="column date-column">
+                <h3>Selected Date:</h3>
+                    <input type="date" id="datePicker">
+                <p id="selectedDate">No date selected</p>
+            </div>
         </div>
-    
-        <!-- Column 2: Form -->
-        <div class="column form-column">
-            <h2>Schedule an Appointment</h2>
-            <form id="appointmentForm">
-                <label for="fullName">Full Name</label>
-                <input type="text" id="fullName" name="fullName" placeholder="Ex. Juan Dela Cruz" required>
+        
+        <!-- Confirmation Modal -->
+        <div class="modal" id="confirmationModal" style="display: none;">
+            <div class="modal-content">
+            <span class="close">&times;</span>
+                <h3>Appointment Confirmation</h3>
+                <p><strong>Date:</strong> <span id="modalDate"></span></p>
+                <p><strong>Name:</strong> <span id="modalName"></span></p>
+                <p><strong>Occupation:</strong> <span id="modalOccupation"></span></p>
+                <p><strong>Company:</strong> <span id="modalCompany"></span></p>
+                <p><strong>Contact:</strong> <span id="modalContact"></span></p>
+                <p><strong>Email:</strong> <span id="modalEmail"></span></p>
+                <p><strong>Reason:</strong> <span id="modalReason"></span></p>
 
-                <label for="occupation">Occupation</label>
-                <input type="text" id="occupation" name="occupation" placeholder="Ex. Farmer, Researcher, Fisherman" required>
-
-                <label for="company">Company</label>
-                <input type="text" id="company" name="company" placeholder="Ex. ABC Company" required>
-
-                <label for="contactNumber">Contact Number</label>
-                <input type="tel" id="contactNumber" name="contactNumber" placeholder="Ex. +63 912 345 6789" required>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Ex. example@gmail.com" required>
-
-                <label for="reason">Reason for Appointment</label>
-                <textarea id="reason" name="reason" rows="4" placeholder="State your reason..." required></textarea>
-
-                <button type="submit" id="confirmBtn">Confirm</button>
-            </form>
+                <button id="correctBtn">OK</button>
+            </div>
         </div>
-    
-        <!-- Column 3: Date Display -->
-        <div class="column date-column">
-            <h3>Selected Date:</h3>
-                <input type="date" id="datePicker">
-            <p id="selectedDate">No date selected</p>
+
+        <!-- Thank You Modal -->
+        <div id="thankYouModal" class="modal" style="display: none;">
+            <div class="modal-content">
+            <h1 class="thank-you-title">Thank You for booking!</h1>
+            <p>
+                We appreciate you taking the time to connect with us. 
+                Your appointment has been successfully scheduled, and we will reach out to you soon with more details about the time, location, and the format of your appointment. 
+            </p>
+            <button id="closeThankYou">Close</button>
         </div>
     </div>
     
-      <!-- Confirmation Modal -->
-      <div class="modal" id="confirmationModal" style="display: none;">
-        <div class="modal-content">
-        <span class="close">&times;</span>
-            <h3>Appointment Confirmation</h3>
-            <p><strong>Date:</strong> <span id="modalDate"></span></p>
-            <p><strong>Name:</strong> <span id="modalName"></span></p>
-            <p><strong>Occupation:</strong> <span id="modalOccupation"></span></p>
-            <p><strong>Company:</strong> <span id="modalCompany"></span></p>
-            <p><strong>Contact:</strong> <span id="modalContact"></span></p>
-            <p><strong>Email:</strong> <span id="modalEmail"></span></p>
-            <p><strong>Reason:</strong> <span id="modalReason"></span></p>
-
-            <button id="correctBtn">OK</button>
-        </div>
+        <div id="footer-container"></div>
+        <script src="js/scheduling.js"></script>
+        <script src="js/main.js"></script>   
+        <script src="js/inject.js"></script>
     </div>
-
-    <!-- Thank You Modal -->
-    <div id="thankYouModal" class="modal" style="display: none;">
-        <div class="modal-content">
-        <h1 class="thank-you-title">Thank You for booking!</h1>
-        <p>
-            We appreciate you taking the time to connect with us. 
-            Your appointment has been successfully scheduled, and we will reach out to you soon with more details about the time, location, and the format of your appointment. 
-        </p>
-        <button id="closeThankYou">Close</button>
-    </div>
-  </div>
-  
-    <div id="footer-container"></div>
-    <script src="js/scheduling.js"></script>
-    <script src="js/main.js"></script>   
-    <script src="js/inject.js"></script>
-     
 </body>
 </html>
